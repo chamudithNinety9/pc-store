@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
-import java.io.File;
 import java.io.InputStream;
 import java.nio.file.*;
 import java.nio.file.Path;
@@ -33,15 +32,14 @@ public class ProductsController {
 
     @GetMapping({ "", "/" })
     public String showProductList(Model model){
-        System.out.println("1");
         List<Product> products = productsRepo.findAll(Sort.by(Sort.Direction.DESC, "id"));
-        model.addAttribute("products", products);
+        model.addAttribute("products", products); /*This line adds the products list to the model,
+                                                                making it accessible to the view layer. */
         return "/products/list";
     }
 
     @GetMapping("/create")
     public String showCreatePage(Model model){
-        System.out.println("2");
         ProductDto productDTO = new ProductDto();
         model.addAttribute("productDto", productDTO);
         return "products/CreateProduct";
