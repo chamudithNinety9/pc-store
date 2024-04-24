@@ -1,5 +1,5 @@
+Computer Marketplace WebApplication
 
-Computer Marketplace WebApplicationComputer Marketplace WebApplication
 The PC Store Website is an e-commerce platform designed to provide users with a convenient and streamlined shopping experience for computer hardware and accessories. Leveraging modern web technologies and responsive design principles, this project offers a comprehensive range of functionalities to meet the diverse needs of users.
 
 Functionalities:
